@@ -1,0 +1,106 @@
+{
+  "type": "directory",
+  "rights": {
+    "read": [
+      "user",
+      "admin"
+    ],
+    "write": [
+      "user",
+      "admin"
+    ],
+    "delete": [
+      "admin"
+    ]
+  },
+  "files": {
+    "file1_for_user.txt": {
+      "type": "file",
+      "rights": {
+        "read": [
+          "user",
+          "admin"
+        ],
+        "write": [
+          "user",
+          "admin"
+        ],
+        "delete": [
+          "user",
+          "admin"
+        ]
+      },
+      "content": "some content for user"
+    },
+    "dir1_for_user": {
+      "type": "directory",
+      "rights": {
+        "read": [
+          "user",
+          "admin"
+        ],
+        "write": [
+          "user",
+          "admin"
+        ],
+        "delete": [
+          "user",
+          "admin"
+        ]
+      },
+      "files": {
+        "file3_for_user.txt": {
+          "type": "file",
+          "rights": {
+            "read": [
+              "user",
+              "admin"
+            ],
+            "write": [
+              "user",
+              "admin"
+            ],
+            "delete": [
+              "user",
+              "admin"
+            ]
+          },
+          "content": "some content for user"
+        }
+      }
+    },
+    "dir2_for_admin": {
+      "type": "directory",
+      "rights": {
+        "read": [
+          "admin"
+        ],
+        "write": [
+          "admin"
+        ],
+        "delete": [
+          "admin"
+        ]
+      },
+      "files": {
+        "file4_for_admin.txt": {
+          "type": "file",
+          "rights": {
+            "read": [
+              "user",
+              "admin"
+            ],
+            "write": [
+              "admin"
+            ],
+            "delete": [
+              "admin"
+            ]
+          },
+          "content": "some content for admin"
+        }
+      }
+    }
+  }
+}
+
