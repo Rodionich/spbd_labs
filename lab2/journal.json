@@ -1,0 +1,159 @@
+{
+  "type": "directory",
+  "rights": {
+    "read": ["user1", "admin", "user2", "user3", "user4"],
+    "write":  ["user1", "admin", "user2", "user3", "user4"],
+    "delete":  ["user1", "admin", "user2", "user3", "user4"]
+  },
+  "files": {
+    "secure": {
+      "type": "directory",
+      "rights": {
+        "read": ["admin"],
+        "write": ["admin"],
+        "delete": ["admin"]
+      },
+      "files": {
+        "register": {
+          "type": "file",
+          "rights": {
+            "read": ["admin"],
+            "write": ["admin"],
+            "delete": ["admin"]
+          },
+          "content": "[{\"login\": \"admin\", \"password\": \"admin\"}, {\"login\": \"user1\", \"password\": \"111\", \"time\": 1655755128, \"question\": \"1\", \"answer\": \"10\"}, {\"login\": \"user2\", \"password\": \"222\", \"time\": 1655755128, \"question\": \"2\", \"answer\": \"4\"}, {\"login\": \"user3\", \"password\": \"333\", \"time\": 1655755128, \"question\": \"3\", \"answer\": \"Petrova\"}, {\"login\": \"user4\", \"password\": \"444\", \"time\": 1655755128, \"question\": \"4\", \"answer\": \"Borsch\"}]"
+        }
+      }
+    },
+
+    "A": {
+      "type": "directory",
+      "rights": {
+        "read": ["admin", "user1"],
+        "write": ["admin", "user1"],
+        "delete": ["admin", "user1"]
+      },
+      "files": {
+
+      }
+    },
+
+    "C": {
+      "type": "directory",
+      "rights": {
+        "read": ["admin", "user2"],
+        "write": ["admin", "user2"],
+        "delete": ["admin"]
+      },
+      "files": {
+
+      }
+    },
+
+    "E": {
+      "type": "directory",
+      "rights": {
+        "read": ["admin", "user3", "user4"],
+        "write": ["admin", "user3", "user4"],
+        "delete": ["admin", "user3", "user4"]
+      },
+      "files": {
+    "file1_for_user.txt": {
+      "type": "file",
+      "rights": {
+        "read": [
+          "user3",
+          "admin",
+          "user4"
+        ],
+        "write": [
+          "user3",
+          "admin",
+          "user4"
+        ],
+        "delete": [
+          "user3",
+          "admin",
+          "user4"
+        ]
+      },
+      "content": "some content"
+    },
+    "dir1_for_user": {
+      "type": "directory",
+      "rights": {
+        "read": [
+          "user3",
+          "admin",
+          "user4"
+        ],
+        "write": [
+          "user3",
+          "admin",
+          "user4"
+        ],
+        "delete": [
+          "user3",
+          "admin",
+          "user4"
+        ]
+      },
+      "files": {
+        "file3_for_user.txt": {
+          "type": "file",
+          "rights": {
+            "read": [
+              "user3",
+              "admin",
+              "user4"
+            ],
+            "write": [
+              "user3",
+              "admin",
+              "user4"
+            ],
+            "delete": [
+              "user3",
+              "admin",
+              "user4"
+            ]
+          },
+          "content": "some content"
+        }
+      }
+    },
+    "dir2_for_admin": {
+      "type": "directory",
+      "rights": {
+        "read": [
+          "admin"
+        ],
+        "write": [
+          "admin"
+        ],
+        "delete": [
+          "admin"
+        ]
+      },
+      "files": {
+        "file4_for_admin.txt": {
+          "type": "file",
+          "rights": {
+            "read": [
+              "admin"
+            ],
+            "write": [
+              "admin"
+            ],
+            "delete": [
+              "admin"
+            ]
+          },
+          "content": "some content for admin"
+        }
+      }
+    }
+  }
+    }
+  }
+}
